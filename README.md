@@ -22,7 +22,7 @@ Term: Fall 2016
 
  5. Now that I had a training set with each song's music features as well as their responded topics(around 30000 "observations" in total), I used different machine learning classification methods to train a model in order to predict topics with music features. The methods I used were logistic regression, random forest, knn classifcation and support vector machine. Random forest outperformed. 
 
- 6. For final prediction, the random forest model was able to return prediction probability. I usd the top 5 probabilities to weight the result in order to achieve better performance. Here is an example: given music features, the random forest model gives a prediction of topic 4 with probability of 0.6, a prediction of topic 3 with probability of 0.4. The word "love" is ranked 15th in topic 4 and 30th in topic 3. Then a weighted prediction rank I calculated for word "love" was 0.6*15+0.4*30=21.
+ 6. For final prediction, the random forest model was able to return prediction probability. I usd the top 5 probabilities to weight the result in order to achieve better performance. Here is an example: given music features, the random forest model gives a prediction of topic 4 with probability of 0.6, a prediction of topic 3 with probability of 0.4. The word "love" is ranked 15th in topic 4 and 30th in topic 3. Then a weighted prediction rank I calculated for word "love" was 0.6 * 15 + 0.4 * 30=21.
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 ```
