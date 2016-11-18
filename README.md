@@ -8,11 +8,18 @@ Term: Fall 2016
 
 + [Data link](https://courseworks2.columbia.edu/courses/11849/files/folder/Project_Files?preview=763391)-(**courseworks login required**)
 + [Data description](doc/readme.html)
-+ Contributor's name:
-+ Projec title: Lorem ipsum dolor sit amet
-+ Project summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	
-Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
++ Contributor's name: Yunyi Zhang
++ Projec title: Association Mining of Music and Text
++ Project summary: The goal of the project is to develop a system to recommend lyrics words based on the features of a piece of music. General speaking, I used topic modeling and random forest to dig in associations between lyrics and music features in order to develop the model with good performance.The predicted final evaluation index is around 0.27, which means with the 5000 vocab dictionary, the average prediction rank is around 680. 
+
++ Project details: Here is the process of my model development:
+1. Process the music feauture of the 2350 songs in training set.The final variables I used are number of bars, number of beats, duration(calculated by the last start time of bar), tempo(calculated by beats per min), number of sections, number of segments, mean of maximum loudness in each segment, mean of starting loudness in each segment, median pitch for all segments(12 dimension), median timbre for all segments(12 dimensions). 
+
+2. Develop a topic model with 20 resulted topics based on the lyrics of the 2350 songs in training set. Each topic has its own ranking in the vocab (meaning that words have different probability of appearing in each topic). Based on the result model, I extracted the top FOUR   topics that each song should be assigned to with the highest probability. 
+
+2. Based on the probability of each assigned topic, I "bootstrap" the music feature training set. This is an example. For one of the songs n the dataset, the top topics assigned to it by the topic model are: 5,8,10,15 with a probability of 0.3, 0.3, 0.2, 0.1. Then I copy the music features of this song for 9 times (then they are 9 observations). Three of them are assigned with a topic label of 5, three are with a topic label of 8, 2 are of 10 and finally 1 is of 15. In this way I simulated the distribution of topics of the songs in the training set and develop the whole training set into a more representative sample 
+
+
 
 ```
 proj/
