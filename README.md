@@ -24,6 +24,13 @@ Term: Fall 2016
 
  6. For final prediction, the random forest model was able to return prediction probability. I usd the top 5 probabilities to weight the result in order to achieve better performance. Here is an example: given music features, the random forest model gives a prediction of topic 4 with probability of 0.6, a prediction of topic 3 with probability of 0.4. The word "love" is ranked 15th in topic 4 and 30th in topic 3. Then a weighted prediction rank I calculated for word "love" was 0.6 * 15 + 0.4 * 30=21.
 
++ Reference: 
+ 1. Topic Models:https://cran.r-project.org/web/packages/topicmodels/vignettes/topicmodels.pdf
+ 2. Original Dataset: http://labrosa.ee.columbia.edu/millionsong/  
+ 3. Data Description: http://labrosa.ee.columbia.edu/millionsong/pages/example-track-description
+            
+
+
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 ```
 proj/
